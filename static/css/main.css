@@ -1,0 +1,181 @@
+body {
+    font-family: "Roboto", sans-serif;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    background-color: #f4f4f4;
+  }
+#main_body{
+    background-color: #ffff;
+    padding: 10px;
+}
+
+#footer{
+    padding: 40px;
+    background-color: black;
+    color: white;
+    width: 100%;
+}
+
+#footer #fotcopy {
+    text-align: center;
+}
+
+#logo{
+    width: 30px;
+    height: 30px;
+}
+
+/* product list CSS here */
+.container-prodlisting{
+    display: flex;
+    height: 100%;
+}
+.contents{
+    padding-left: 10px;
+    float: left;
+    text-decoration: none;
+    color: black;
+}
+.image-product{
+    height: 100px;
+}
+
+.contents:hover{
+    text-decoration-style: none;
+    color: rgba(0,0,0,0.5);
+}
+a,a *{
+    text-decoration: none !important;
+}
+
+
+#catlist{
+    padding-right: 15px;
+    float: left;
+    list-style: none;
+}
+
+
+/* end product list CSS here */
+
+
+
+/* product deatil CSS here */
+#prod_detail{
+    margin-top: 5px;
+
+}
+
+.newarrival{
+    background: green;
+    width: 50px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;    
+}
+
+.col-md-7 h2{
+    color:#555; 
+}
+
+.stars{
+    height: 15px;
+}
+
+.price{
+    color: #FE980F;
+    font-size: 26px;
+    font-weight: bold;
+    padding-top: 20px;
+}
+
+#prod_image{
+    max-width: 30%;
+    height: 30%;
+    object-fit: cover;
+}
+
+#prod_detail{
+    min-width: 50%;
+    height: 50%; 
+}
+/* end of product deatil CSS */
+
+
+/* footer CSS here */
+.footer-about h2 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 45px;
+    text-align: center;
+}
+
+#footer_about{
+    text-align: center;
+}
+
+#favi{
+    font-size: 30px;
+    color: #d7d7d7;
+    margin-right: 19px;
+    overflow: hidden;
+}
+
+#favit{
+    font-size: 20px;
+    color: #d7d7d7;
+    margin-right: 19px;
+    overflow: hidden;
+}
+
+#social_media{
+    text-align: center;
+    padding: 60px;
+}
+
+/* footer css ending */
+
+
+/* dashbaord css */
+
+.profile-card{
+    object-fit: cover;
+    margin: auto;
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.5);
+}
+
+.image-container{
+    object-fit: cover;
+    position: relative;
+}
+
+.info{
+    color: orange;
+    margin-right: 16px;
+}
+
+.main-container{
+    padding: 20px;
+}
+
+.warning{
+    margin-right: 20px;
+}
+#profileimage{
+    height: 200px;
+    width: 200px;
+}
+/* dashboard css ending  */
+
+
+
+
+
+
+
+
+
+
+
