@@ -10,14 +10,11 @@
     <div class="row">
 
         <div class="col-md-4 bg-dark text-center">
-            <div class="profile-card">
+            <div >
                 <div class="image-containers">
                     <br>
-                    <img class="rounded-circle" id="profileimage" src="{{ carx.photo.url }}"
-                        alt="img not found">
                         <h2 class="text-white">{{ user }}</h2>
-                        <p><a href="" class="info">Change Photo</a></p>
-                        <p><a href="" class="info">Edit Profile</a></p>
+                        <p><a href="{% url 'accounts:editprofile' %}" class="info">Edit Profile</a></p>
                         <p> <a href="{% url 'accounts:password_change' %}" class="info"> Change Account Password </a></p>
                 </div>
             </div>
@@ -25,10 +22,8 @@
 
         <div class="col-md-4">
             <div class="main-container">
-                <p> <i class="fa fa-briefcase info"></i> Last_name First_name </p>
-                <p> <i class="fa fa-home info"></i> Region_of_Residence</p>
-                <p> <i class="fa fa-envelope info"></i> email_address here </p>
-                <p> <i class="fa fa-phone info"></i> Personal Phone number </p>
+                <p> <strong> <i class="fa fa-briefcase info"></i> {{ user.first_name }} {{ user.last_name }}</strong></p>
+                <p> <i class="fa fa-envelope info"></i> {{ user.email }} </p>
                 <hr>
             </div>
         </div>

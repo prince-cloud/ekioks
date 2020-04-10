@@ -22,7 +22,8 @@
         <ul class="all-cat-lits">
 
             {% for category in category_list%}
-            <li id="catlist"><b><a href="{% url 'products:product_list_category' category.slug %}"> {{category}} </a></b>
+            <li id="catlist"><b><a href="{% url 'products:product_list_category' category.slug %}"> {{category}}
+                    </a></b>
                 <spann class="num-of-adds">({{category.total_product}})</spann>
             </li>
             {% endfor %}
@@ -51,7 +52,6 @@
 
 <!-- itmes -->
 <div class="row">
-
     <div class="col-md-8">
         <div class="card pt-3">
             <div class="card-body">
@@ -79,7 +79,14 @@
 
 
                     <hr>
-
+                    {% empty %}
+                    <tr>
+                        <td colspan="7">
+                            <h1>There are no Items...</h2>
+                        </td>
+                    </tr>
+                    <a href="{% url 'products:sell_item' %}"> <input type="submit" class="btn btn-dark"
+                        value="Post Ad"></a>
                     {% endfor %}
 
 
@@ -135,29 +142,6 @@
 
         <div>
             <h6> <b> Location</b> </h6>
-        </div>
-
-        <div>
-            <h6><b> Filter with Price</b></h6>
-            <input type="radio"> Ghc 1.00 - Ghc 99.00 <br>
-
-            <input type="radio"> Ghc 100.00 - Ghc 199.00 <br>
-
-            <input type="radio"> Ghc 200.00 - Ghc 299.00 <br>
-
-            <input type="radio"> Ghc 300.00 - Ghc 399.00 <br>
-
-            <input type="radio"> Ghc 400.00 - Ghc 499.00 <br>
-
-            <input type="radio"> Ghc 500.00 - Ghc 599.00 <br>
-
-            <input type="radio"> Ghc 600.00 - Ghc 699.00 <br>
-
-            <input type="radio"> Ghc 700.00 - Ghc 799.00 <br>
-
-            <input type="radio"> Ghc 800.00 - Ghc 899.00 <br>
-
-            <input type="radio"> Ghc 900.00 - Ghc 1,000.00 <br>
         </div>
 
     </div>

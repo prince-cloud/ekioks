@@ -4,8 +4,10 @@
 
 <link rel="icon" type="image/png" href="{% static 'loginstatic/images/icons/favicon.ico' %}" />
 <link rel="stylesheet" type="text/css" href="{% static 'loginstatic/vendor/bootstrap/css/bootstrap.min.css' %}">
-<link rel="stylesheet" type="text/css" href="{% static 'loginstatic/fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
-<link rel="stylesheet" type="text/css" href="{% static 'loginstatic/fonts/Linearicons-Free-v1.0.0/icon-font.min.css' %}">
+<link rel="stylesheet" type="text/css"
+        href="{% static 'loginstatic/fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+<link rel="stylesheet" type="text/css"
+        href="{% static 'loginstatic/fonts/Linearicons-Free-v1.0.0/icon-font.min.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'loginstatic/vendor/animate/animate.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'loginstatic/vendor/css-hamburgers/hamburgers.min.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'loginstatic/vendor/animsition/css/animsition.min.css' %}">
@@ -29,25 +31,6 @@
                                 <form method="POST" enctype="multipart/form-data" class="form">
                                         {% csrf_token %}
                                         {% bootstrap_form form %}
-
-
-
-                                        <div class="flex-sb-m w-full p-b-48">
-
-                                                <div>
-                                                        <a href="{% url 'accounts:password_reset' %}" class="txt3">
-                                                                Forgot Password?
-                                                        </a>
-                                                </div>
-
-                                                <div>
-                                                        <a href="{% url 'accounts:register' %}" class="txt3">
-                                                                Register Now
-                                                        </a>
-                                                </div>
-
-                                        </div>
-
 
                                         {% buttons %}
                                         <input type="submit" class="btn btn-primary" value="Post Ad">

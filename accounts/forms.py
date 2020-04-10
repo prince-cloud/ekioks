@@ -18,10 +18,9 @@ class RegisterForm(forms.ModelForm):
     phone = forms.CharField(
         help_text=" ",
     ) 
-    profile_image = forms.ImageField()
     class Meta:
         model = User
-        fields = ('username', 'email' ,'first_name', 'last_name','phone', 'password', )
+        fields = ('username', 'email' ,'first_name', 'last_name', 'phone', 'password', )
     
     
     def clean_password2(self, *args, **kwargs):

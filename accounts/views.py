@@ -39,5 +39,6 @@ def password_change_done(request):
     return redirect('accounts:password_change_done')
 
 
-
+def editprofile(request):
+    return redirect('accounts:editprofile')
 
