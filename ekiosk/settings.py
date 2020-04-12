@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'product',
     'bootstrap4',
     'django_forms_bootstrap',
+    'imagekit'
     
 ]
 

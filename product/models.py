@@ -2,6 +2,8 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.utils import timezone
 from django.utils.text import slugify
+from imagekit.models import ImageSpecField, ProcessedImageField
+from imagekit.processors import ResizeToFill
 # Create your models here.
 
 class Product(models.Model):
@@ -38,11 +40,15 @@ class Product(models.Model):
     description = models.TextField(max_length=500)
     condition = models.CharField(max_length=100, choices=CONDITION_TYPE, default="New")
     price = models.DecimalField(max_digits=6, decimal_places=2)
-    image = models.ImageField(upload_to='main_products/', blank=True, null=True)
+    #image = models.ImageField(upload_to='main_products/', blank=True, null=True)
     phone = models.CharField(max_length=10, default=None)
     region = models.CharField(choices=REGION, max_length=50)
     date = models.DateTimeField(auto_now=True)
     slug = models.SlugField(blank=True, null=True)
+
+    image = ProcessedImageField(upload_to='main_products/', processors=[ResizeToFill(100,100)], format='JPEG', options={'quality': 60}, blank=True, null=True)
+
+    image_thumbnail = ImageSpecField(source='image', processors=[ResizeToFill(100,100)], format='JPEG', options={'quality': 60})
 
     class Meta:
         ordering = ('-date',)
