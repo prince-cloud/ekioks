@@ -13,9 +13,22 @@ class Product(models.Model):
     )
 
     REGION = (
-        ("Bono Region", "Bono Region"),
+        ("Ahafo Region", "Ahafo Region"),
         ("Ashante Region", "Ashante Region"),
-        ("Upper East", "Upper East")
+        ("Bono Region", "Bono Region"),
+        ("Bono East Region", "Bono East Region"),
+        ("Central Region", "Central Region"),
+        ("Eastern Region", "Eastern Treson"),
+        ("Greater Accra", "Greater Accra"),
+        ("Northern REgion", "Northern Region"),
+        ("North East", "North East"),
+        ("Oti Region", "Oti Region"),
+        ("Savannah Region", "Savannah Region"),
+        ("Upper East Region", "Upper East Region"),
+        ("Upper West Region", "Upper West Region"),
+        ("Volta Region", "Volta Region"),
+        ("Western Region", "Western Region"),
+        ("Western North", "Western North")
     )
 
     title = models.CharField(max_length=100)
@@ -83,4 +96,5 @@ class Brand(models.Model):
         
     def __str__(self):
         return self.brand_name
+
 

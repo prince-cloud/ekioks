@@ -31,6 +31,31 @@ body {
     display: flex;
     height: 100%;
 }
+
+#searchinput{
+    width: 40%;
+}
+
+#searchinput[type=text] {
+    color: black;
+    padding: 7px;
+}
+
+.container-box{
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
+    margin-bottom: 5px;
+}
+
+.container-box:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#prod-text{
+    margin-left: 20px;
+}
+
 .contents{
     padding-left: 10px;
     float: left;
@@ -39,6 +64,7 @@ body {
 }
 .image-product{
     height: 100px;
+    width: 100px;
 }
 
 .contents:hover{
@@ -49,17 +75,11 @@ a,a *{
     text-decoration: none !important;
 }
 
-
 #catlist{
-    padding-right: 15px;
-    float: left;
+    padding: 5px;
     list-style: none;
 }
-
-
 /* end product list CSS here */
-
-
 
 /* product deatil CSS here */
 #prod_detail{
@@ -102,7 +122,6 @@ a,a *{
 }
 /* end of product deatil CSS */
 
-
 /* footer CSS here */
 .footer-about h2 {
     font-size: 18px;
@@ -134,9 +153,7 @@ a,a *{
     text-align: center;
     padding: 60px;
 }
-
 /* footer css ending */
-
 
 /* dashbaord css */
 
@@ -168,9 +185,6 @@ a,a *{
     width: 200px;
 }
 /* dashboard css ending  */
-
-
-
 
 
 

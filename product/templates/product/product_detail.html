@@ -12,7 +12,6 @@
 
 <nav aria-label="breadcrumb" role="navigation">
     <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="{% url 'products:product_list' %}">Home</a></li>
         <li class="breadcrumb-item active"><a href="{% url 'products:product_list' %}">All Ads</a></li>
         {% if category%}
         <li class="breadcrumb-item active">{{category}} </li>
@@ -79,10 +78,10 @@
                 </div>
                 <ul class="list-group list-group-flush text-justify pl-2"> <br>
 
-                    <h4 class="card-title"> <i class="fa fa-briefcase pr-2"> </i>{{ product_detail.owner}}</h4>
-                    <h4 class="card-text"> <i class="fa fa-phone pr-2"></i>{{ product_detail.phone }} <br><i
-                            class="fa fa-home warning pr-2"></i>{{ product_detail.region }}
-                    </h4> <br>
+                    <h4 class="card-title"> Name: {{ product_detail.owner}}</h4>
+                    <h4 class="card-text"> <i class="fa fa-phone pr-2"></i>{{ product_detail.phone }}</h4>
+                    <h4 class="card-title">{{ product_detail.region}}</h4> 
+                    <br>
                 </ul>
             </div>
 

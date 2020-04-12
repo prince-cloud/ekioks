@@ -31,7 +31,7 @@ def productlist(request, category_slug=None):
     paginator = Paginator(productlist, 10)
     page = request.GET.get('page')
     productlist = paginator.get_page(page)
-    template = 'Product/product_list.html'
+    template = 'product/product_list.html'
 
     context = {'product_list':productlist, 'category_list':categorylist, 'category':category }
     return render(request,  template, context)
@@ -41,12 +41,12 @@ def productdetail(request, product_slug):
     print(product_slug)
     productdetail = get_object_or_404(Product, slug=product_slug)
     productimages = ProductImages.objects.filter(product=productdetail)
-    template = 'Product/product_detail.html'
+    template = 'product/product_detail.html'
     context = {'product_detail':productdetail,'product_images' : productimages}
     return render(request, template, context)    
 
 @login_required
-def sellitemview(request):
+def postad(request):
     if request.method == 'POST':
         form = Sellform(data=request.POST, files=request.FILES)
         if form.is_valid():
@@ -56,7 +56,7 @@ def sellitemview(request):
             return redirect('accounts:dashboard')
     else:
         form = Sellform()
-    return render(request, 'product/sellitem.html',{'form':form})
+    return render(request, 'product/postad.html',{'form':form})
 
 
 
@@ -74,4 +74,4 @@ def edititemview(request, product_slug):
             return redirect('accounts:dashboard')
     else:
         form = Sellform(instance=product)
-    return render(request, 'product/sellitem.html',{'form':form})
+    return render(request, 'product/postad.html',{'form':form})

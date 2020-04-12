@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
 
 
-  <title>eKiosk | Welcome </title>
+  <title>eKioskgh | Welcome </title>
 
 </head>
 
@@ -26,7 +26,7 @@
   <!--::header::-->
   <nav class="navbar navbar-dark bg-dark">
     <img id="logo" src="{% static 'img/logo.png'  %}" alt="logo not found">
-    <a class="navbar-brand" href="{% url 'products:product_list' %}">eKiosk</a>
+    <a class="navbar-brand" href="{% url 'products:product_list' %}">eKioskgh</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -37,7 +37,7 @@
           <a class="nav-link" href="{% url 'products:product_list' %}">Home <span class="sr-only"> (current) </span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'products:sell_item' %}">Post Ad</a>
+          <a class="nav-link" href="{% url 'products:postad' %}">Post Ad</a>
         </li>
         {% if request.user.is_authenticated %}
         <li class="nav-item">
@@ -86,9 +86,6 @@
 
         <div class="container">
           <p class="text-center">
-            <h2 class="text-centre info"><img class="img-fluid" id="logo"
-                src="{% static 'img/logo.png' %}" alt="logo here" class="rounded-circle"></h2>
-            <p></p>
           </p>
         </div>
 
@@ -136,7 +133,7 @@
       <div class="row">
         <div class="col-md-12 text-center">
 
-          <h5 class="text-center info">About US</h5>
+          <h5 class="text-center info">About</h5>
 
           <div class="col-md6 text-justify">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero corporis fugiat sed, totam ad commodi iste
@@ -179,11 +176,6 @@
       </div>
     </div>
 
-
-
-
-
-
     <div id="social_media" class="row">
       <div class="container">
         <div class="social-links">
@@ -193,7 +185,6 @@
           <a href=""><i id="favi" class="fab fa-twitter"></i><span id="favit">twitter</span></a>
         </div>
 
-
       </div>
     </div>
 
@@ -201,9 +192,8 @@
 
     <div id="fotcopy" class="container">
       <hr>
-      <h6> @Copyright eKiosk 2020 </h6>
+      <h6> @Copyright eKioskgh 2020 </h6>
     </div>
-    <hr>
   </div>
   </div>
   <!--footer ending -->
