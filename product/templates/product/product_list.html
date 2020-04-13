@@ -7,7 +7,6 @@
 
 
 
-{% include 'carosel.html'%}
 <br>
 
 
@@ -47,7 +46,7 @@
     <div class="col-md">
         <form class="header-search-form" method="GET" action="{% url 'products:product_list'%}">
             <input id="searchinput" name="q" type="text" placeholder="Search ....">
-            <input id="searchbutton" type="button" class="btn btn-dark" type="submit" value="Search">
+            <input id="searchbutton" type="button" class="btn btn-info" type="submit" value="Search">
         </form>
         <br>
         <br>
@@ -72,7 +71,7 @@
                         <span> <b> {{product.title}} </b></span>
                         <div>
                             <div></div>
-                            <div><span>GH₵ {{product.price}}</span></div>
+                            <div><strong id="prodprice">GH₵ {{product.price}}</strong></div>
                             <div><span>{{ product.category}}, {{ product.brand}} </span></div>
                             <div> {{ product.date.date }} </div>
                         </div>

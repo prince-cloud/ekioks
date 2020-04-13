@@ -17,15 +17,15 @@
   <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
 
 
-  <title>eKioskgh | Welcome </title>
+  <title>eKioskgh | Home </title>
 
 </head>
 
 <body class="container">
 
   <!--::header::-->
-  <nav class="navbar navbar-dark bg-dark">
-    <img id="logo" src="{% static 'img/logo.png'  %}" alt="logo not found">
+  <nav class="navbar navbar-dark bg-info">
+    <img id="logo" src="" alt="">
     <a class="navbar-brand" href="{% url 'products:product_list' %}">eKioskgh</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -198,14 +198,10 @@
   </div>
   <!--footer ending -->
 
-  <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="{% static 'js/all.js' %}"></script>
-  <script src="{% static 'js/jquery-3.3.1.slim.min.js' %}"></script>
+  <script src="{% static 'js/jquery.min.js' %}"></script>
   <script src="{% static 'js/popper.min.js' %}"></script>
   <script src="{% static 'js/bootstrap.min.js' %}"></script>
-
-
 
 </body>
 

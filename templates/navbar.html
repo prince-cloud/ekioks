@@ -10,8 +10,8 @@
 
 <!--::header::-->
 <div class="container">
-  <nav class="navbar navbar-dark bg-dark">
-    <img id="logo" src="{% static 'img/logo.png' %}" alt="logo not found">
+  <nav class="navbar navbar-dark bg-info">
+    <img id="logo" src="" alt="">
     <a class="navbar-brand" href="{% url 'products:product_list' %}">eKiosk</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
       aria-expanded="false" aria-label="Toggle navigation">
@@ -50,4 +50,7 @@
   </nav>
 </div>
 
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/popper.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
 <!--::header ending::-->

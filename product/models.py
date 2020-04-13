@@ -40,13 +40,13 @@ class Product(models.Model):
     description = models.TextField(max_length=500)
     condition = models.CharField(max_length=100, choices=CONDITION_TYPE, default="New")
     price = models.DecimalField(max_digits=6, decimal_places=2)
-    #image = models.ImageField(upload_to='main_products/', blank=True, null=True)
+    image = models.ImageField(upload_to='main_products/', blank=True, null=True)
     phone = models.CharField(max_length=10, default=None)
     region = models.CharField(choices=REGION, max_length=50)
     date = models.DateTimeField(auto_now=True)
     slug = models.SlugField(blank=True, null=True)
 
-    image = ProcessedImageField(upload_to='main_products/', processors=[ResizeToFill(100,100)], format='JPEG', options={'quality': 60}, blank=True, null=True)
+    #image = ProcessedImageField(upload_to='main_products/', processors=[ResizeToFill(100,100)], format='JPEG', options={'quality': 60}, blank=True, null=True)
 
     image_thumbnail = ImageSpecField(source='image', processors=[ResizeToFill(100,100)], format='JPEG', options={'quality': 60})
 
@@ -57,7 +57,6 @@ class Product(models.Model):
         if not self.slug and self.title:
             self.slug = slugify(self.title)
         super(Product, self).save(*args, **kwargs)
-
 
     def __str__(self):
         return self.title
@@ -93,6 +92,7 @@ class Category(models.Model):
     def __str__(self):
         return self.category_name
 
+
 class Brand(models.Model):
     brand_name = models.CharField(max_length=50) 
 
@@ -102,5 +102,3 @@ class Brand(models.Model):
         
     def __str__(self):
         return self.brand_name
-
-
